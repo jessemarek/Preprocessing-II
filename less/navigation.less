@@ -29,6 +29,7 @@ nav {
     .nav-links {
         .flexBox(row, space-around, center);
         width: 60%;
+        
 
         @media @phone {
             width: 80%;
@@ -39,10 +40,8 @@ nav {
             text-decoration: none;
             color: @font-color;
             font-size: 2rem;
+            .link-animation(@font-color, 0.4s);
 
-            &:hover {
-               text-decoration: underline;
-            }
         }//a end
 
     }//.nav-links end

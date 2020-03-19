@@ -1,3 +1,4 @@
+/* Nav Links Animation */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -222,9 +223,22 @@ nav .nav-links a {
   text-decoration: none;
   color: #212529;
   font-size: 2rem;
+  position: relative;
 }
-nav .nav-links a:hover {
-  text-decoration: underline;
+nav .nav-links a:after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: #212529;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: -6px;
+  transition: width 0.4s ease 0s, left 0.4s ease 0s;
+}
+nav .nav-links a:hover:after {
+  width: 100%;
+  left: 0;
 }
 .footer {
   width: 100%;
