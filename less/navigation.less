@@ -1,1 +1,42 @@
 // Navigation Styles here
+
+header{
+    margin-top: 14%;
+    border-bottom: 2px dashed @navigation-border;
+
+    .nav-bar {
+        .flexBox(row, space-between, center);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: #fff;
+        border-bottom: 2px dashed @navigation-border;
+    }//nav-bar end
+
+    nav {
+        .flexBox(row, space-between, center);
+        max-width: 800px;
+        width: 100%;
+        margin: 2% auto;
+
+        .nav-links {
+           .flexBox(row, space-around, center);
+           width: 60%;
+
+            a {
+                text-decoration: none;
+                color: @font-color;
+                font-size: 2rem;
+            }//a end
+
+        }//.nav-links end
+
+    }//nav end
+
+    .header-text {
+        margin: 30px 0;
+
+    }//.header-text end
+}//header end
