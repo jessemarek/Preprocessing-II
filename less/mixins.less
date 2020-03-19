@@ -5,3 +5,22 @@
     justify-content: @justify;
     align-items: @align;
 }
+
+.custom-btn(@bgcolor, @fontcolor) {
+    background: @bgcolor;
+    color: @fontcolor;
+    margin: 0 auto;
+    border:2px solid @button-bg;
+    border-radius: 7px;
+    padding: 3% 2%;
+    outline: none;
+    text-align: center;
+    font-size: 1.8rem;
+
+    &:hover {
+        background: @fontcolor;
+        color: @bgcolor;
+        cursor: pointer;
+    }
+    
+}
