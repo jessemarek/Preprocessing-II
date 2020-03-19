@@ -227,13 +227,13 @@ nav .nav-links a {
 }
 nav .nav-links a:after {
   display: block;
-  position: absolute;
-  content: "";
-  background: #212529;
   width: 0;
   height: 2px;
+  position: absolute;
   left: 50%;
   bottom: -6px;
+  content: "";
+  background: #212529;
   transition: width 0.4s ease 0s, left 0.4s ease 0s;
 }
 nav .nav-links a:hover:after {
