@@ -29,14 +29,14 @@
 .link-animation(@color, @speed) {
    position: relative;
 
-    &:after {  
+    &:after { 
+        content: ""; 
         display: block;  
         width: 0;
         height: 2px;
         position: absolute;
         left: 50%;
         bottom: -6px;
-        content: "";
         background: @color;
         transition: width @speed ease 0s, left @speed ease 0s;
     }
