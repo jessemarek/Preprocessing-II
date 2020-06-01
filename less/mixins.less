@@ -1,1 +1,50 @@
 // Mixins in here
+.flexBox(@direction, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.custom-btn(@bgcolor, @fontcolor) {
+    background: @bgcolor;
+    color: @fontcolor;
+    margin: 0 auto;
+    border:2px solid @button-bg;
+    border-radius: 7px;
+    padding: 3% 2%;
+    outline: none;
+    text-align: center;
+    font-size: 1.8rem;
+
+    &:hover {
+        background: @fontcolor;
+        color: @bgcolor;
+        cursor: pointer;
+    }
+    
+}
+
+/* Nav Links Animation */
+.link-animation(@color, @speed) {
+   position: relative;
+
+    &:after { 
+        content: ""; 
+        display: block;  
+        width: 0;
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        background: @color;
+        transition: width @speed ease 0s, left @speed ease 0s;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%; 
+            left: 0; 
+        }
+    }
+}

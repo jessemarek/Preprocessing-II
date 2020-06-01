@@ -1,1 +1,54 @@
 // Navigation Styles here
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    border-bottom: 2px dashed @navigation-border;
+}//nav-bar end
+
+nav {
+    .flexBox(row, space-between, center);
+    max-width: 800px;
+    width: 100%;
+    margin: 2% auto;
+
+    @media @phone {
+        .flexBox(column, center, center);
+    }
+
+    .title{
+        @media @tablet {
+            width: 25%;
+            text-align: center;
+        }
+
+        @media @phone {
+            width: 100%;
+            //text-align: center;
+        }
+    }
+
+    .nav-links {
+        .flexBox(row, space-around, center);
+        width: 60%;
+        
+
+        @media @phone {
+            width: 80%;
+            margin: 1% auto 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: @font-color;
+            font-size: 2rem;
+            .link-animation(@font-color, 0.4s);
+
+        }//a end
+
+    }//.nav-links end
+
+}//nav end
